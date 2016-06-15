@@ -1,10 +1,39 @@
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
-<img src="10518308_10154710135140234_5676369808346035648_o.jpg" alt="Mountain View" style="margin:-11px; width:101%;">
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
 <style>
+.check{
+
+    margin:-1% -10%;
+    width: 110%;
+    left: -100px;
+    height: 3000px;
+    background-image: url('10518308_10154710135140234_5676369808346035648_o.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% 0%;
+    
+
+}
+.fixed-ratio-resize { /* basic responsive img */
+	width: 110%;
+      margin:0px;
+      overflow-x: hidden;
+      padding:0px;
+	height: auto;
+	width: auto\9; /* IE8 */
+}
 
 .txt {
    position: absolute;
@@ -12,6 +41,7 @@
    left: 40px;
    top: 30px;
    color: #fff;
+
    font-size: 2em;
    font-weight: bold;
    font-family: Helvetica;
@@ -24,7 +54,7 @@
 
 .divBillie{
 
-    position: absolute;
+    position: fixed;
     border-radius: 25px;
     opacity: 1.0;
     left: 180px;
@@ -67,6 +97,8 @@
 </style>
 </head>
 <body bgcolor="#1A171B">
+<div class="check">
+<div>
 <div id="dividZoey" class="divZoey">
      <div id="txtidZoey" class="txt">Zoey</div>
      <iframe id="frameidZoey" width="0" height="0" style="border: none;" src="https://api.thingspeak.com/channels/118941/charts/2"></iframe>
@@ -85,6 +117,7 @@
 
 
 <script>
+
 var x = 0;
 $("#dividZoey").click(function() {
     if ( $(this).height() != 50){
