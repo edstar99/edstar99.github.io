@@ -9,15 +9,30 @@
 <html>
 <head>
 
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <style>
+body{
+    overflow-x: hidden;
+}
+
+.affix {
+    top: 0;
+    width: 100%;
+}
+
+.affix + .container-fluid {
+    padding-top: 70px;
+}
+
 .check{
 
-    margin:-1% -10%;
+    margin:-3% -3%;
     width: 110%;
-    left: -100px;
     height: 3000px;
     background-image: url('10518308_10154710135140234_5676369808346035648_o.jpg');
     background-repeat: no-repeat;
@@ -26,6 +41,13 @@
     
 
 }
+.check2{
+    
+    margin:2.5% 3%;
+    width: 100%; 
+
+}
+
 .fixed-ratio-resize { /* basic responsive img */
 	width: 110%;
       margin:0px;
@@ -36,7 +58,7 @@
 }
 
 .txt {
-   position: absolute;
+
    opacity: 0.9;
    left: 40px;
    top: 30px;
@@ -54,13 +76,12 @@
 
 .divBillie{
 
-    position: fixed;
+    
     border-radius: 25px;
     opacity: 1.0;
-    left: 180px;
     width: 100px;
     height: 50px;
-    margin: 5px;
+    margin: 10px;
     float: left;
     padding: 30px;
     text-align: center;
@@ -68,12 +89,13 @@
 }
 .divZoey{
 
-    position: absolute;
+
     border-radius: 25px;
     opacity: 1.0;
+    left: 10px;
     width: 100px;
     height: 50px;
-    margin: 5px;
+    margin: 10px;
     float: left;
     padding: 30px;
     text-align: center;
@@ -81,13 +103,13 @@
 }
 .divVivienne{
 
-    position: absolute;
+
     border-radius: 25px;
     opacity: 1.0;
     width: 145px;
     left: 350px;
     height: 50px;
-    margin: 5px;
+    margin: 10px;
     float: left;
     padding: 30px;
     text-align: center;
@@ -97,12 +119,31 @@
 </style>
 </head>
 <body bgcolor="#1A171B">
+
+<div class="container-fluid" style="background-color:#F44336;color:#fff;height:200px;">
+  <h1>Bootstrap Affix Example</h1>
+  <h3>Fixed (sticky) navbar on scroll</h3>
+  <p>Scroll this page to see how the navbar behaves with data-spy="affix".</p>
+  <p>The navbar is attached to the top of the page after you have scrolled a specified amount of pixels.</p>
+</div>
+
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+  <ul class="nav navbar-nav">
+    <li class="active"><a href="#">Basic Topnav</a></li>
+    <li><a href="#">Page 1</a></li>
+    <li><a href="#">Page 2</a></li>
+    <li><a href="#">Page 3</a></li>
+  </ul>
+</nav>
+
+
 <div class="check">
-<div>
+<div class="check2">
 <div id="dividZoey" class="divZoey">
      <div id="txtidZoey" class="txt">Zoey</div>
      <iframe id="frameidZoey" width="0" height="0" style="border: none;" src="https://api.thingspeak.com/channels/118941/charts/2"></iframe>
-</div>
+</div></div>
+
 
 <div id="dividBillie" class="divBillie">
      <div id="txtidBillie" class="txt" >Billie</div>
@@ -114,7 +155,7 @@
     <iframe id="frameidVivienne" width="0" height="0" style="border: none;" src="https://api.thingspeak.com/channels/3/charts/1"></iframe>
     
 </div>
-
+</div>
 
 <script>
 
