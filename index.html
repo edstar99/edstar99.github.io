@@ -1,259 +1,179 @@
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style type="text/css">
+   body { background: #1A171B !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+</style>
 <style>
-body{
-    overflow-x: hidden;
+.navbar-default {
+  background-color: #ff751a;
+  border-color: #ff751a;
+}
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ff751a;
+}
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ff751a;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #000000;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #ff751a;
+  background-color: #ff751a;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
+  background-color: #ff751a;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #ff751a;
+  background-color: #ff751a;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #ff751a;
+  background-color: #ff751a;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #ff751a;
+  background-color: #ff751a;
 }
 
+.navbar-default .navbar-toggle {
+  border-color: #ff751a;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #ff751a;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-link {
+  color: #ffffff;
+}
+.navbar-default .navbar-link:hover {
+  color: #ff751a;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ff751a;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ff751a;
+    background-color: #ff751a;
+  }
+}
+
+body{
+    height: 5000px;
+
+}
+.test{
+    background: none !important; 
+    border: 0 !important;
+    top: -50px;
+
+}
 .affix {
     top: 0;
     width: 100%;
-}
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    background-color: #ff751a;
+    border-color: #ff751a;
 
+}
+.affix a {
+    color: #ff751a !important;
+    padding: 25px !important;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+.affix-top a {
+    padding: 25px !important;
+}
 .affix + .container-fluid {
-    padding-top: 70px;
+    padding-top: 95px;
 }
 
-.check{
-
-    margin:-3% -3%;
-    width: 110%;
-    height: 3000px;
-    background-image: url('10518308_10154710135140234_5676369808346035648_o.jpg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 50% 0%;
-    
-
-}
-.check2{
-    
-    margin:2.5% 3%;
+#background {
     width: 100%; 
-
+    position: absolute; 
+    left: 0px; 
+    top: 0px; 
+    z-index: 0;
 }
 
-.fixed-ratio-resize { /* basic responsive img */
-	width: 110%;
-      margin:0px;
-      overflow-x: hidden;
-      padding:0px;
-	height: auto;
-	width: auto\9; /* IE8 */
+.stretch {
+    width:100%;
+    height:100%;
 }
-
-.txt {
-
-   opacity: 0.9;
-   left: 40px;
-   top: 30px;
-   color: #fff;
-
-   font-size: 2em;
-   font-weight: bold;
-   font-family: Helvetica;
-   text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0    1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
-}
-
-.txtZoey {
-  text-align: center;
-}
-
-.divBillie{
-
-    
-    border-radius: 25px;
-    opacity: 1.0;
-    width: 100px;
-    height: 50px;
-    margin: 10px;
-    float: left;
-    padding: 30px;
-    text-align: center;
-    background-color: #FF6600;
-}
-.divZoey{
-
-
-    border-radius: 25px;
-    opacity: 1.0;
-    left: 10px;
-    width: 100px;
-    height: 50px;
-    margin: 10px;
-    float: left;
-    padding: 30px;
-    text-align: center;
-    background-color: #FF6600;
-}
-.divVivienne{
-
-
-    border-radius: 25px;
-    opacity: 1.0;
-    width: 145px;
-    left: 350px;
-    height: 50px;
-    margin: 10px;
-    float: left;
-    padding: 30px;
-    text-align: center;
-    background-color: #FF6600;
-}
-
 </style>
 </head>
-<body bgcolor="#1A171B">
+<body>
+<div id="background">
+    <img id="image" src="10518308_10154710135140234_56763698083dd46035648_o.jpg" class="stretch" alt="" />
 
-<div class="container-fluid" style="background-color:#F44336;color:#fff;height:200px;">
-  <h1>Bootstrap Affix Example</h1>
-  <h3>Fixed (sticky) navbar on scroll</h3>
-  <p>Scroll this page to see how the navbar behaves with data-spy="affix".</p>
-  <p>The navbar is attached to the top of the page after you have scrolled a specified amount of pixels.</p>
-</div>
-
-<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+<div id="navy">        
+<nav class="navbar navbar-inverse navbar-default test">
   <ul class="nav navbar-nav">
-    <li class="active"><a href="#">Basic Topnav</a></li>
+    <li><a href="#" class="navbar-left"><img src="47658_10153814691180129_3839091996173679679_n.jpg"></a></li>
+    <li><a href="#">Basic Topnav</a></li>
     <li><a href="#">Page 1</a></li>
     <li><a href="#">Page 2</a></li>
     <li><a href="#">Page 3</a></li>
   </ul>
 </nav>
-
-
-<div class="check">
-<div class="check2">
-<div id="dividZoey" class="divZoey">
-     <div id="txtidZoey" class="txt">Zoey</div>
-     <iframe id="frameidZoey" width="0" height="0" style="border: none;" src="https://api.thingspeak.com/channels/118941/charts/2"></iframe>
-</div></div>
-
-
-<div id="dividBillie" class="divBillie">
-     <div id="txtidBillie" class="txt" >Billie</div>
-     <iframe id="frameidBillie" width="0" height="0" style="border: none;" src="https://api.thingspeak.com/channels/3/charts/1"></iframe>
 </div>
 
-<div id="dividVivienne" class="divVivienne">
-    <div id="txtidVivienne" class="txt">Vivienne</div>
-    <iframe id="frameidVivienne" width="0" height="0" style="border: none;" src="https://api.thingspeak.com/channels/3/charts/1"></iframe>
-    
-</div>
-</div>
 
+</div>
 <script>
-
-var x = 0;
-$("#dividZoey").click(function() {
-    if ( $(this).height() != 50){
-          $("#txtidZoey").animate({opacity: '0.9', top: '30px', left: '40px', fontSize: '2em'}, 600);
-          $("#frameidZoey").animate({width: '0'});
-          $("#frameidZoey").animate({height: '0'});
-          $( this ).animate({width: '100px', opacity: '0.4'}, "slow");
-          $( this ).animate({height: '50px', opacity: '1.0'}, 1000, function () {
-                $(this).css('z-index', 1)
-                document.getElementById("frameidZoey").style="border: none;";
-          })
-          
-          
-    }
-    else {
-          $(this).css('z-index', 100)
-          
-          $( this ).animate({height: '600px', opacity: '0.4'}, 500, function () {
-               $( this ).animate({width: '600px', opacity: '1.0'}, "slow");
-               $("#frameidZoey").animate({height: '250'});
-               $("#frameidZoey").animate({width: '450'});
-               document.getElementById("frameidZoey").style="border: 1px solid #cccccc;";
-               document.getElementById("frameidZoey").style="margin-top:+300px;"
-               $("#txtidZoey").animate({opacity: '1', top: '90px', left: '100px', fontSize: '12em'}, 500);
-          })
-          
-          
-    }
-
-          
-
-});
-$("#dividBillie").click(function() {
-    if (x==1){
-    }   
-    else if ( $(this).height() != 50 || $(this).width() != 100){
-          x=1;
-          $("#txtidBillie").animate({opacity: '0.9', top: '30px', left: '40px', fontSize: '2em'}, 600);
-          $("#frameidBillie").animate({width: '0'});
-          $("#frameidBillie").animate({height: '0'});
-          $( this ).animate({width: '100px', opacity: '0.4'}, "slow");
-          $( this ).animate({height: '50px', opacity: '1.0'}, 1000, function () {
-                $(this).css('z-index', 1)
-                document.getElementById("frameidBillie").style="border: none;";
-          })
-          x=0;
-    }
-    else {
-          x=1;
-          $(this).css('z-index', 100)
-          
-          $( this ).animate({height: '600px', opacity: '0.4'}, 500, function () {
-               $( this ).animate({width: '600px', opacity: '1.0'}, "slow");
-               $("#frameidBillie").animate({height: '250'});
-               $("#frameidBillie").animate({width: '450'});
-               document.getElementById("frameidBillie").style="border: 1px solid #cccccc;";
-               document.getElementById("frameidBillie").style="margin-top:+200px;"
-               $("#txtidBillie").animate({opacity: '1', top: '20px', left: '100px', fontSize: '12em'}, 500);
-               x=0;
-          })
-          
-          
-    }
-
-          
-
-});
-$("#dividVivienne").click(function() {
-    if ( $(this).height() != 50){
-          $("#txtidVivienne").animate({opacity: '0.9', top: '30px', left: '40px', fontSize: '2em'}, 600);
-          $("#frameidVivienne").animate({width: '0'});
-          $("#frameidVivienne").animate({height: '0'});
-          $( this ).animate({width: '145px', opacity: '0.4'}, "slow");
-          $( this ).animate({height: '50px', opacity: '1.0'}, 1000, function () {
-                $(this).css('z-index', 1)
-                document.getElementById("frameidVivienne").style="border: none;";
-          })
-          
-    }
-    else {
-          $(this).css('z-index', 100)
-          
-          $( this ).animate({height: '600px', opacity: '0.4'}, 500, function () {
-               $( this ).animate({width: '600px', opacity: '1.0'}, "slow");
-               $("#frameidVivienne").animate({height: '250'});
-               $("#frameidVivienne").animate({width: '450'});
-               document.getElementById("frameidVivienne").style="border: 1px solid #cccccc;";
-               document.getElementById("frameidVivienne").style="margin-top:+300px;"
-               $("#txtidVivienne").animate({opacity: '1', top: '180px', left: '100px', fontSize: '7em'}, 500);
-          })
-
-    }
-});
+$('.nav').affix({
+      offset: {
+        top: $('#image').height()
+      }
+}); 
 
 </script>
-
 </body>
 </html>
